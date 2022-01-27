@@ -1,4 +1,4 @@
-﻿// Copyright (C) 2022 Chia-hung Hung (ChiahongHong).
+﻿// Copyright (C) 2022 Chiahong Hong.
 
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -123,14 +123,10 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
         TCHAR buffer[16];
         StringCchPrintf(buffer, 16, TEXT("#%2X%2X%2X"), GetRValue(color), GetGValue(color), GetBValue(color));
 
-        HGDIOBJ hFont = GetStockObject(ANSI_VAR_FONT);
-        LOGFONT logfont;
-        GetObject(hFont, sizeof(LOGFONT), &logfont);
-
-        // Change height
-        logfont.lfHeight = 50;
-        HFONT hNewFont = CreateFontIndirect(&logfont);
-        HFONT hOldFont = (HFONT)SelectObject(hdc, hNewFont);
+        HGDIOBJ hNewFont = CreateFont(70, 0, 0, 0, FW_DONTCARE, 0, 0, 0, DEFAULT_CHARSET, OUT_OUTLINE_PRECIS,
+            CLIP_DEFAULT_PRECIS, CLEARTYPE_QUALITY, VARIABLE_PITCH, TEXT("Consolas"));
+        
+        HGDIOBJ hOldFont = (HFONT)SelectObject(hdc, hNewFont);
 
         // Draw text
         DrawText(hdc, buffer, -1, &rect, DT_SINGLELINE | DT_CENTER | DT_VCENTER);

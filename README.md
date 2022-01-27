@@ -1,6 +1,6 @@
 # Color Picker
 
-Implement a Color Picker via Windows API.
+Implement a Screen Color Picker via Windows API.
 
 ![](screenshot.jpg)
 
@@ -9,7 +9,7 @@ Implement a Color Picker via Windows API.
 - CMake 3.8
 
 ## License
-Copyright (C) 2022 Chia-hung Hung (ChiahongHong).
+Copyright (C) 2022 Chiahong Hong.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
