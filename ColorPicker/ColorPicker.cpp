@@ -121,7 +121,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
         SetBkMode(hdc, TRANSPARENT);
 
         TCHAR buffer[16];
-        StringCchPrintf(buffer, 16, TEXT("#%2X%2X%2X"), GetRValue(color), GetGValue(color), GetBValue(color));
+        StringCchPrintf(buffer, 16, TEXT("#%02X%02X%02X"), GetRValue(color), GetGValue(color), GetBValue(color));
 
         HGDIOBJ hNewFont = CreateFont(70, 0, 0, 0, FW_DONTCARE, 0, 0, 0, DEFAULT_CHARSET, OUT_OUTLINE_PRECIS,
             CLIP_DEFAULT_PRECIS, CLEARTYPE_QUALITY, VARIABLE_PITCH, TEXT("Consolas"));
