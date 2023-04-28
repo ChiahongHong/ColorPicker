@@ -1,6 +1,6 @@
 # Color Picker
 
-Implement a Screen Color Picker via Windows API.
+Implement a Screen Color Picker using the Windows API.
 
 ![](screenshot.jpg)
 
