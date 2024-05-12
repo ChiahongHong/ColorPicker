@@ -1,4 +1,4 @@
-﻿// Copyright (C) 2022 Chiahong Hong.
+﻿// Copyright (C) 2024 Chiahong Hong.
 
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -20,7 +20,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
                       _In_ PWSTR pCmdLine,
                       _In_ int nCmdShow)
 {
-    SetProcessDPIAware();
+    SetProcessDpiAwareness(PROCESS_PER_MONITOR_DPI_AWARE);
 
     // Register the window class.
     TCHAR CLASS_NAME[] = "MainWindow";
@@ -125,7 +125,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 
         HGDIOBJ hNewFont = CreateFont(70, 0, 0, 0, FW_DONTCARE, 0, 0, 0, DEFAULT_CHARSET, OUT_OUTLINE_PRECIS,
             CLIP_DEFAULT_PRECIS, CLEARTYPE_QUALITY, VARIABLE_PITCH, TEXT("Consolas"));
-        
+
         HGDIOBJ hOldFont = (HFONT)SelectObject(hdc, hNewFont);
 
         // Draw text

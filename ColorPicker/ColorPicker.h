@@ -1,4 +1,4 @@
-﻿// Copyright (C) 2022 Chiahong Hong.
+﻿// Copyright (C) 2024 Chiahong Hong.
 
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 
 #include <windows.h>
 #include <strsafe.h>
+#include <shellscalingapi.h>
+#pragma comment(lib, "Shcore.lib")
 
 LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 

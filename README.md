@@ -9,7 +9,7 @@ Implement a Screen Color Picker using the Windows API.
 - CMake 3.8
 
 ## License
-Copyright (C) 2022 Chiahong Hong.
+Copyright (C) 2024 Chiahong Hong.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
